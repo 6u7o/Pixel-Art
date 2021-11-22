@@ -1,8 +1,8 @@
-const divPai = document.getElementById('divPai')
+const divPai = document.getElementById('pixel-board')
 
 function addClassToAll() {
     for(let i = 0; i < divPai.children.length; i += 1) {
-        divPai.children[i].className = 'block'
+        divPai.children[i].className = 'pixel'
     }
 }
 
@@ -10,24 +10,24 @@ addClassToAll()
 
 const colorBlocks = document.getElementsByClassName('color')
 
-
 for(let i2 = 0; i2 < colorBlocks.length; i2 += 1) {
     colorBlocks[i2].addEventListener('click', getColor) 
-    console.log('ha')
 }
 
 let currentBlock;
-let currentColor;
+let currentColor = 'black'
 
 function getColor(evt) {
-    currentBlock = window.getComputedStyle(evt.target)  // tinha aprendido (e referênciado) este método no exercicio do dia5-3.
-
-    // console.log(evt.target)
+    colorBlocks[0].className = 'color black'
+    colorBlocks[1].className = 'color red'
+    colorBlocks[2].className = 'color blue'
+    colorBlocks[3].className = 'color green'
+    evt.target.className += ' selected'
+    currentBlock = window.getComputedStyle(evt.target)
     currentColor = currentBlock.backgroundColor
-    // console.log(currentColor)
 }
 
-const blankBlocks = document.getElementsByClassName('block')
+const blankBlocks = document.getElementsByClassName('pixel')
 
 for(let i3 = 0; i3 < blankBlocks.length; i3 += 1) {
     blankBlocks[i3].addEventListener('click', useColor) 
@@ -35,12 +35,15 @@ for(let i3 = 0; i3 < blankBlocks.length; i3 += 1) {
 
 function useColor(evt) {
     evt.target.style.backgroundColor = currentColor
-    // console.log(evt.target)
 }
 
 
-// let color1 = colorBlocks[0]
+const btn = document.getElementById('clear-board')
 
-// let blockCS = window.getComputedStyle(color1)
+btn.addEventListener('click', clearBoard)
 
-// console.log(blockCS.backgroundColor)
+function clearBoard() {
+    for(let i3 = 0; i3 < blankBlocks.length; i3 += 1) {
+        blankBlocks[i3].style.backgroundColor = 'white'
+    }
+}

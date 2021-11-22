@@ -1,13 +1,15 @@
 .color {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     display: inline-block;
-    border: solid;
+    border: black solid 1px;
 }
 
-.block {
-    height: 100px;
-    width: 100px;
+.pixel {
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border: black solid 1px;
     display: inline-block;
     float: left;
 }
@@ -31,15 +33,12 @@
     background-color: white;
 }
 
-#divPai {
+#pixel-board {
     border: solid;
-    width: 500px;
-    height: 500px;
+    width: 210px;
+    height: 210px;
 }
 
-#divPai div{
-}
-
-body {
+.selected {
 
 }
