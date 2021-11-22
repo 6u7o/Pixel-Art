@@ -9,7 +9,7 @@
     height: 100px;
     width: 100px;
     display: inline-block;
-    border: solid;
+    float: left;
 }
 
 .red {
@@ -33,6 +33,8 @@
 
 #divPai {
     border: solid;
+    width: 500px;
+    height: 500px;
 }
 
 #divPai div{
