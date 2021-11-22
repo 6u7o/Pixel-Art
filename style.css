@@ -1,0 +1,43 @@
+.color {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border: solid;
+}
+
+.block {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border: solid;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+#divPai {
+    border: solid;
+}
+
+#divPai div{
+}
+
+body {
+
+}
