@@ -12,7 +12,7 @@ let n = 5
 let blankBlocks = document.getElementsByClassName('pixel')
 
 function boardSize() {
-    if(inputSize.value == ''){
+    if(inputSize.value <= 0){
         alert('Board inválido!')
     } else if(inputSize.value < 5) {
         n = 5
